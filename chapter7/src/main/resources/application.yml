@@ -15,3 +15,6 @@ spring:
   h2:
     console:
       enabled: true
+jwt:
+  issuer: csh091456743@gmail.com # 클레임에 들어가는 iss 정보
+  secret_key: study-springboot # 서명에 들어가는 비밀키 정보 'study-springboot'를 예시로 설정. 원래는 복잡하게 설정하거나 생성키, 인증키를 구현해야함
