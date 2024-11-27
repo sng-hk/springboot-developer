@@ -16,8 +16,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-
-    runtimeOnly 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+    testImplementation 'org.springframework.security:spring-security-test'
+//    runtimeOnly 'com.h2database:h2'
+    implementation 'mysql:mysql-connector-java' // mysql db
+    implementation 'io.jsonwebtoken:jjwt' // 자바 jwt 라이브러리
+    implementation 'javax.xml.bind:jaxb-api' // xml 문서 java 객체 간 매핑 자동화
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
