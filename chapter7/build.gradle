@@ -12,6 +12,10 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -21,13 +25,17 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
 //    runtimeOnly 'com.h2database:h2'
     implementation 'mysql:mysql-connector-java' // mysql db
-    implementation 'io.jsonwebtoken:jjwt' // 자바 jwt 라이브러리
-    implementation 'javax.xml.bind:jaxb-api' // xml 문서 java 객체 간 매핑 자동화
+    implementation 'io.jsonwebtoken:jjwt:0.9.1' // 자바 jwt 라이브러리
+    implementation 'javax.xml.bind:jaxb-api:2.3.1' // xml 문서 java 객체 간 매핑 자동화
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.projectlombok:lombok'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
 
 
